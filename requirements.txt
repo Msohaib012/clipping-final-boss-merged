@@ -1,0 +1,16 @@
+fastapi==0.163.2
+uvicorn[standard]==0.54.0
+python-dotenv==1.2.4
+yt-dlp==2026.10.26
+faster-whisper==1.2.1
+av==12.3.0  # pinned: faster-whisper 1.2.1 calls av.open(metadata_errors=...) which av>=13/19 rejects; unpinned av installed 19.0.2 and broke transcription (fixed 2026-11-21 real-clip test)
+opencv-python-headless==5.1.0.95
+mediapipe==1.2.3  # BlazeFace facecam detection (layouts.py); needs system libs libegl1 + libgles2 — `sudo apt-get install -y libegl1 libgles2` on a fresh VM, else detection falls back to Haar
+numpy==2.5.5
+pillow==13.0.0
+chat-downloader==0.2.8
+websockets==17.4
+google-api-python-client==2.202.0
+google-auth-oauthlib==1.5.0
+pytest==9.2.0
+httpx==0.28.1
